@@ -1,2 +1,1 @@
-# conversion-program-assignment
-Challenge assignment for CSE1321
+# Conversion Program Assignment (CSE1321)
