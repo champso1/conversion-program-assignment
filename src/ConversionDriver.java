@@ -15,8 +15,8 @@ class ConversionDriver {
             System.out.print("Choice: ");
             choice = sc.nextInt();
 
-            switch(choice) {
-                case 1: 
+            switch (choice) {
+                case 1:
                     TempConversion t = new TempConversion(sc);
                     t.convert();
                     break;
@@ -24,7 +24,15 @@ class ConversionDriver {
                     WeightConversion w = new WeightConversion(sc);
                     w.convert();
                     break;
-                default: System.out.println("Error");
+                case 3:
+                    CurrencyConversion c = new CurrencyConversion();
+                    c.convert();
+                    break;
+                case 5: 
+                    System.out.print("Good Bye!");
+                    break;
+                default:
+                    System.out.println("Error");
             }
 
         } while (choice != 5);
