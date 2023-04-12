@@ -1,5 +1,5 @@
-package ChallengeAssignment;
 import java.util.Scanner;
+
 public class CurrencyConversion {
     private static float currency;
     Scanner sc = new Scanner(System.in);
@@ -22,13 +22,14 @@ public class CurrencyConversion {
                 break;
             default:
                 System.out.println("Invalid choice\n");
-        }}
+        }
+    }
 
-        public static float DtoE(){
-            return (float) (currency * 0.91);
-        }
-        public static float EtoD(){
-            return (float) (currency * (1 / 0.91));
-        }
+    public static float DtoE(){
+        return (float) (currency * 0.91);
+    }
+    public static float EtoD(){
+        return (float) (currency * (1 / 0.91));
+    }
 
 }
