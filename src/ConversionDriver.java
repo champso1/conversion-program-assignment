@@ -17,16 +17,20 @@ class ConversionDriver {
 
             switch (choice) {
                 case 1:
-                    TempConversion t = new TempConversion(sc);
-                    t.convert();
+                    TempConversion temp = new TempConversion(sc);
+                    temp.convert();
                     break;
                 case 2:
-                    WeightConversion w = new WeightConversion(sc);
-                    w.convert();
+                    WeightConversion weight = new WeightConversion(sc);
+                    weight.convert();
                     break;
                 case 3:
-                    CurrencyConversion c = new CurrencyConversion();
-                    c.convert();
+                    CurrencyConversion currency = new CurrencyConversion();
+                    currency.convert();
+                    break;
+                case 4:
+                    TimeConversion time = new TimeConversion();
+                    time.convert();
                     break;
                 case 5: 
                     System.out.print("Good Bye!");

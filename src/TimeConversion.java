@@ -11,7 +11,7 @@ public class TimeConversion {
     static private final String[][] allStates = {EST, CST, MST, PST, AKST, HST}; //can add as many as you wish as long as it is in descending time order
     static int hour;
 
-    public static void convert(){
+    public void convert(){
         do {
             System.out.print("Initial State: ");
             initialState = sc.nextLine();
@@ -28,7 +28,7 @@ public class TimeConversion {
             newState = sc.nextLine();
         }while (!stateValidator(newState));
 
-        System.out.println(initialState + " is located in the " + printTimeZone(findTimeZoneIndex(newState)) +"\n" + newState + " is located in the " + printTimeZone(findTimeZoneIndex(newState)) +"\nwhen it is " + initialTime + " in " + initialState + ", it is " + newTime(findTimeZoneIndex(initialState), findTimeZoneIndex(newState)) + initialTime.substring(2,5) + " in " + newState);
+        System.out.println(initialState + " is located in the " + printTimeZone(findTimeZoneIndex(initialState)) +"\n" + newState + " is located in the " + printTimeZone(findTimeZoneIndex(newState)) +"\nwhen it is " + initialTime + " in " + initialState + ", it is " + newTime(findTimeZoneIndex(initialState), findTimeZoneIndex(newState)) + initialTime.substring(2,5) + " in " + newState);
 
     }
     private static String printTimeZone(int x){
