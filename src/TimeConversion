@@ -1,0 +1,100 @@
+import java.util.Scanner;
+public class TimeConversion {
+    static String initialTime, initialState, newState;
+    static Scanner sc = new Scanner(System.in);
+    static private final String[] EST = {"Connecticut", "CT", "Delaware", "DE", "District of Columbia", "DC", "Florida", "FL", "Georgia", "GA", "Indiana", "IN", "Kentucky", "KY", "Maine", "ME", "Maryland", "MD", "Massachusetts", "MA", "Michigan", "MI", "New Hampshire", "NH", "New Jersey", "NJ", "New York", "NY", "North Carolina", "NC", "Ohio", "OH", "Pennsylvania", "PA", "Rhode Island", "RI", "South Carolina", "SC", "Tennessee", "TN", "Vermont", "VT", "Virginia", "VA", "West Virginia", "WA"};
+    static private final String[] CST = {"Alabama", "AL", "Arkansas", "AR", "Florida", "FL", "Illinois", "IL", "Indiana", "IN", "Iowa", "IA", "Kansas", "KY", "Kentucky", "KY", "Louisiana",  "LA", "Minnesota", "MN", "Missouri", "MO", "Mississippi", "MS", "Nebraska", "NE", "North Dakota", "ND", "Oklahoma", "OK", "South Dakota", "SD", "Tennessee", "TN", "Texas", "TX", "Wisconsin", "WI"};
+    static private final String[] MST = {"Arizona", "AZ", "Colorado", "CO", "Idaho", "ID", "Kansas", "KS", "Montana", "MT", "Nebraska", "NE", "New Mexico", "NM", "North Dakota", "ND", "Oregon", "OR", "South Dakota", "SD", "Texas", "TX", "Utah", "UT", "Wyoming", "WY"};
+    static private final String[] PST = {"California", "CA", "Idaho", "ID", "Nevada", "NV", "Oregon", "OR", "Washington", "WA"};
+    static private final String[] AKST = {"Alaska", "AK"};
+    static private final String[] HST = {"Hawaii", "HI"};
+    static private final String[][] allStates = {EST, CST, MST, PST, AKST, HST}; //can add as many as you wish as long as it is in descending time order
+    static int hour, minutes;
+    static String stringHour="", stringMinutes="";
+
+    public static void convert(){
+        do {
+            System.out.print("Initial State: ");
+            initialState = sc.nextLine();
+        }while (!stateValidator(initialState));
+
+        do {
+            System.out.print("Initial time (hh:mm): ");
+            initialTime = sc.nextLine();
+        }while (!timeValidator(initialTime));
+        hour = Integer.parseInt(initialTime.substring(0,2));
+
+        do {
+            System.out.print("New State: ");
+            newState = sc.nextLine();
+        }while (!stateValidator(newState));
+
+    }
+
+    private static boolean stateValidator(String x) {
+        int j = 0;
+        boolean validator = false, found = false;
+        for (int i = 0; i < allStates.length; i++) {
+
+            if (found)break;
+
+            switch (i) {
+                case 0:
+                    j = EST.length;
+                    break;
+                case 1:
+                    j = CST.length;
+                    break;
+                case 2:
+                    j = MST.length;
+                    break;
+                case 3:
+                    j = PST.length;
+                    break;
+                case 4:
+                    j = AKST.length;
+                    break;
+                case 5:
+                    j = HST.length;
+                    break;
+            }
+
+            for (int l = 0; l < j; l++) {
+                if (x.equalsIgnoreCase(allStates[i][l])) {
+                    validator = true;
+                    found = true;
+                    break;
+                }
+            }
+        } return validator;
+    }
+
+    private static boolean timeValidator(String x){
+        boolean validator = true;
+        char test;
+
+        if (initialTime.length() != 5){validator = false;}
+        else {
+            for (int i = 0; i < 2; i++) {
+                test = x.charAt(i);
+                if (test > 47 && test < 58) {
+                } else validator = false;
+            }
+
+            for (int i = 3; i < 5; i++) {
+                test = x.charAt(i);
+                if (test > 47 && test < 58) {
+                } else validator = false;
+            }
+            if (x.charAt(2) == ':'){}
+            else validator = false;
+        }
+
+        return validator;
+    }
+
+
+
+
+
+}
