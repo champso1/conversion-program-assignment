@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Time Conversion Program</title>
+        <link type="text/css" rel="stylesheet" href="../styles.css" />
+        <script src="../script.js"></script>
+    </head>
+
+    <body>
+        <h1 class="header">Time Conversion Program</h1>
+        <a href="../index.html">Return</a>
+        <h3>Enter an initial time zone, a final time zone, and a time to convert.</h3>
+        <form>
+            <label for="initialZone">Initial Time Zone: </label>
+            <select id="initialZone">
+                <option value="none">Select a time zone</option>
+                <option value="EST">EST (Eastern Time)</option>
+                <option value="CDT">CDT (Central Time)</option>
+                <option value="MDT">MDT (Mountain Time)</option>
+                <option value="PDT">PDT (Pacific Time)</option>
+                <option value="AKDT">AKDT (Alaska Time)</option>
+                <option value="HST">HST (Hawaii Time)</option>
+            </select>
+
+            <label for="finalZone">Final Time Zone: </label>
+            <select id="finalZone">
+                <option value="none">Select a time zone</option>
+                <option value="EST">EST (Eastern Time)</option>
+                <option value="CDT">CDT (Central Time)</option>
+                <option value="MDT">MDT (Mountain Time)</option>
+                <option value="PDT">PDT (Pacific Time)</option>
+                <option value="AKDT">AKDT (Alaska Time)</option>
+                <option value="HST">HST (Hawaii Time)</option>
+            </select>
+            <br><br>
+
+            <label for="hInput">Hours: </label><input id="hInput" type="number" name="timeInput" />
+            <label for="mInput">Minutes: </label><input id="mInput" type="number" name="timeInput" />
+            <label for="sInput">Seconds: </label><input id="sInput" type="number" name="timeInput" />
+            <br><br>
+
+            <button name="submit" id="submitTime">Calculate</button>
+        </form>
+        <p id="time" name="answer"></p>
+    </body>
+</html>
