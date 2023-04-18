@@ -2,6 +2,6 @@
 
 webpage portion is very unoptimized because I wanted to try and make it object oriented just like the assignment 
 
-still has a bug or two that i cannot find as well
+functions correctly now, if we wanted to, we could change the time conversion thing to include all states rather than just time zones, which wouldn't be that hard to do
 
-however, its a solid start for sure
+everything works though, that's all that matters.
