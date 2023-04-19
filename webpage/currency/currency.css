@@ -1,0 +1,62 @@
+body{
+    min-height: 100vh;
+    background: linear-gradient(green, black);
+}
+h1{
+    font-family: "SF Pro Display", serif;
+    text-align: center;
+    font-size: 10vh;
+    color: goldenrod;
+    border-bottom: 5px solid white;
+}
+h3{
+    font-size: 6vh;
+
+    margin-bottom: 45px;
+}
+.mainBlock{
+    width: 60%;
+    height: 47vh;
+    text-align: center;
+    font-size: 40px;
+    border: 2px solid silver;
+    color: gold;
+    transition: 0.5s;
+    background-size: 150%;
+    background: linear-gradient(green, silver) top left;
+    margin-top: 5vh;
+    margin-left: 300px;
+}
+a{
+    font-size: 6vh;
+    padding-right: 6.5vh;
+    padding-left: 6.5vh;
+    color: goldenrod;
+
+}
+a:hover{
+    background-color: palevioletred;
+    border: 5px solid darkred;
+    background-size: 300%;
+    color: black;
+    font-size: 6vh;
+    transition: 0.3s;
+}
+
+.Links{
+    align-content: center;
+
+}
+.header{
+    padding-bottom: 20px;
+    padding-top: 20px;
+    margin-top: 0px;
+}
+p {
+    font-size: 10vh;
+    margin-top: 20px;
+}
+.subTitle{
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+}
