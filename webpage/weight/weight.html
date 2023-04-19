@@ -2,16 +2,19 @@
 <html>
     <head>
         <title>Weight Conversion Program</title>
-        <link type="text/css" rel="stylesheet" href="../styles.css" />
+        <link type="text/css" rel="stylesheet" href="weight.css" />
         <script src="script.js"></script>
     </head>
 
     <body>
         <h1 class="header">Weight Conversion Program</h1>
         <a href="../index.html">Return</a>
+        <div class="mainBlock">
         <form>
-            <label for="weight">Enter Weight Here: </label>
-            <input type="number" id="weight" name="input"/><br>
+            <div class="subTitle">
+                <label for="weight">Enter Weight Here: </label>
+                <input type="number" id="weight" name="input"/><br>
+            </div>
 
             <input type="radio" id="KGtoLBS" name="option"/>
             <label for="KGtoLBS">Kilograms to Pounds</label><br>
@@ -21,5 +24,6 @@
             <button name="submit" id="submitWeight">Calculate</button>
         </form>
         <p name="answer" id="answer"></p>
+        </div>
     </body>
 </html>
