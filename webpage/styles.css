@@ -1,3 +1,73 @@
-[name="answer"] {
-    color: red;
+
+body{
+    min-height: 100vh;
+    background: linear-gradient(gold, black);
+}
+h1{
+    font-family: "SF Pro Display", serif;
+    text-align: center;
+    font-size: 10vh;
+    color: darkred;
+    border-bottom: 5px solid white;
+}
+h3{
+    font-size: 6vh;
+
+    margin-bottom: 45px;
+}
+div{
+    margin-top: 10vh;
+    margin-right: 5vh;
+    margin-left: 5vh;
+    height: 30vh;
+    text-align: center;
+    font-size: 5vh;
+    border: 2px solid silver;
+    color: darkred;
+    transition: 0.5s;
+    background-size: 150%;
+    background: linear-gradient(gold, silver) top left;
+}
+a{
+    font-size: 6vh;
+    padding-right: 6.5vh;
+    padding-left: 6.5vh;
+    border-right: 1vh solid white;
+    color: darkred;
+
+}
+.subTitles > nav:nth-child(2) > a:nth-child(4) {
+    border-right: transparent;
+}
+.subTitles > nav:nth-child(2) > a:nth-child(4):hover {
+    border: 5px solid green;
+    border-right: 1vh solid silver;
+    background-color: lightgreen;
+    background-size: 300%;
+    color: black;
+    font-size: 7vh;
+    transition: 0.3s;
+
+}
+a:hover{
+    background-color: lightgreen;
+    border: 5px solid green;
+    background-size: 300%;
+    color: black;
+    font-size: 7vh;
+    transition: 0.3s;
+    border-right: 1vh solid silver;
+}
+
+.Links{
+    align-content: center;
+
+}
+.header{
+    padding-bottom: 20px;
+    padding-top: 20px;
+    margin-top: 0px;
+}
+p{
+    font-size: 20vh;
 }
