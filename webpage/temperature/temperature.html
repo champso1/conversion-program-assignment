@@ -2,16 +2,19 @@
 <html>
     <head>
         <title>Temperature Conversion Program</title>
-        <link type="text/css" rel="stylesheet" href="../styles.css" />
+        <link type="text/css" rel="stylesheet" href="temperature.css" />
         <script src="script.js"></script>
     </head>
 
     <body>
         <h1 class="header">Temperature Conversion Program</h1>
         <a href="../index.html">Return</a>
+        <div class="mainBlock">
         <form>
-            <label for="temperature">Enter Temperature Here: </label>
-            <input type="number" id="temperature" name="input"/><br>
+            <div class="subTitle">
+                <label for="temperature">Enter Temperature Here: </label>
+                <input type="number" id="temperature" name="input"/><br>
+            </div>
 
             <input type="radio" id="CtoF" name="option"/>
             <label for="CtoF">Celcius to Fehrenheit</label><br>
@@ -21,5 +24,6 @@
             <button name="submit" id="submitTemp">Calculate</button>
         </form>
         <p id="answer" name="answer"></p>
+        </div>
     </body>
 </html>
