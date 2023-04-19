@@ -2,16 +2,17 @@
 <html>
     <head>
         <title>Time Conversion Program</title>
-        <link type="text/css" rel="stylesheet" href="../styles.css" />
+        <link type="text/css" rel="stylesheet" href="time2.css" />
         <script src="script.js"></script>
     </head>
 
     <body>
         <h1 class="header">Time Conversion Program</h1>
         <a href="../index.html">Return</a>
-        <h3>Enter an initial state, a final state, and a time to convert.</h3>
+        <div class="mainBlock">
+        <h2 class="text">Enter an initial state, a final state, and a time to convert:</h2>
         <form>
-            <label for="initialStates">Initial Time Zone: </label>
+            <label class="text" for="initialStates">Initial Time Zone: </label>
             <select id="initialStates">
             <option value="none">Select a time zone</option>
                 <optgroup label="EST">
@@ -72,7 +73,7 @@
                 </optgroup>
             </select>
 
-            <label for="finalStates">Final Time Zone: </label>
+            <label class="text" for="finalStates">Final Time Zone: </label>
             <select id="finalStates">
             <option value="none">Select a time zone</option>
                 <optgroup label="EST">
@@ -134,13 +135,16 @@
             </select>
             <br><br>
 
-            <label for="hInput">Hours: <t></t></label><input id="hInput" type="number" name="timeInput" /><br>
-            <label for="mInput">Minutes: </label><input id="mInput" type="number" name="timeInput" /><br>
-            <label for="sInput">Seconds: </label><input id="sInput" type="number" name="timeInput" />
+            <label class="text" for="hInput">Hours: <t></t></label><input id="hInput" type="number" name="timeInput" /><br>
+            <label class="text" for="mInput">Minutes: </label><input id="mInput" type="number" name="timeInput" /><br>
+            <label class="text" for="sInput">Seconds: </label><input id="sInput" type="number" name="timeInput" />
             <br><br>
 
-            <button name="submit" id="submitTime">Calculate</button>
+            <button class="text" name="submit" id="submitTime">Calculate</button>
         </form>
-        <p id="time" name="answer"></p>
+            <div class="answer">
+                <p id="time" name="answer"></p>
+            </div>
+        </div>
     </body>
 </html>
